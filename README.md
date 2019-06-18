@@ -1,2 +1,3 @@
 # RSA_math
-Mathematics of Encryption / Decryption in RSA Systems Using Python
+
+Aims to simulate the encryption / decryption process in RSA systems using python. Uses simple techniques to replicate the mathematics behind RSA.
