@@ -15,6 +15,17 @@ def bit_calculation(n):
 def totient(p, q):
     return (p-1)*(q-1)
 
+def mod(a, b):
+    if a < b:
+        return a
+    else:
+        if a//b == 1:
+            return a-b
+        else:
+            return mod(a-b, b)
+
+#Public and Private Key Generation
+
 def public_key_choices(totient):
     assert type(totient) == int
     possible_keys = []
@@ -26,15 +37,6 @@ def public_key_choices(totient):
             e += 1
         e += 1
     return possible_keys
-
-def mod(a, b):
-    if a < b:
-        return a
-    else:
-        if a//b == 1:
-            return a-b
-        else:
-            return mod(a-b, b)
 
 def private_key(e, totient):
     assert type(e) == int
